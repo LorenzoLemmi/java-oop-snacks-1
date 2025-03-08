@@ -14,17 +14,25 @@ public class RegistroStudenti {
     }
 
     public void aggiungiStudente(Studente studente) {
-        if (numStudenti < studenti.length) {
+        if (studente == null) {
+            System.out.println("Errore: studente non valido.");
+        } else if (numStudenti < 25) {
             studenti[numStudenti] = studente;
             numStudenti++;
+            System.out.println("Studente aggiunto: " + studente);
         } else {
             System.out.println("Registro pieno, non posso aggiungere altri studenti.");
         }
     }
 
     public void stampaListaStudenti() {
+        if (numStudenti == 0) {
+            System.out.println("Il registro è vuoto.");
+            return;
+        }
+        System.out.println("Lista studenti:");
         for (int i = 0; i < numStudenti; i++) {
-            System.out.println(studenti[i].toString());
+            System.out.println (studenti[i]);
         }
     }
 }

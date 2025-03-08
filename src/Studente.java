@@ -13,4 +13,9 @@ public class Studente {
     public String datiConcatenati () {
         return nome + " " + cognome + " " + età;
     }
+
+    @Override
+    public String toString() {
+        return nome + " " + cognome;
+    }
 }

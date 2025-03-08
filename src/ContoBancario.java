@@ -8,12 +8,11 @@ public class ContoBancario {
     private int numeroDiConto;
     private double saldo;
 
-    public ContoBancario (int numeroDiConto, double saldo) {
+    public ContoBancario(int numeroDiConto) {
         this.numeroDiConto = numeroDiConto;
         this.saldo = 0.0;
     }
 
-    // Metodo per depositare denaro
     public void deposito(double importo) {
         if (importo > 0) {
             saldo += importo;
@@ -23,7 +22,6 @@ public class ContoBancario {
         }
     }
 
-    // Metodo per prelevare denaro
     public void prelievo(double importo) {
         if (importo > 0 && importo <= saldo) {
             saldo -= importo;
@@ -33,8 +31,11 @@ public class ContoBancario {
         }
     }
 
-    // Metodo per ottenere il saldo corrente
     public double getSaldo() {
         return saldo;
+    }
+
+    public int getNumeroDiConto() {
+        return numeroDiConto;
     }
 }
