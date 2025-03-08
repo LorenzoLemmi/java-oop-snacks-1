@@ -2,6 +2,7 @@
 costruttore che accetta il numero di conto e inizializza il saldo a zero. Aggiungi metodi 
 pubblici per depositare denaro sul conto, prelevare denaro dal conto e ottenere il saldo
 corrente. */
+
 public class ContoBancario {
 
     private int numeroDiConto;
